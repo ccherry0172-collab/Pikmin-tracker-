@@ -19,872 +19,819 @@
             --border-color: #e2e8f0;
         }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
-        -webkit-tap-highlight-color: transparent;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-    body {
-        background-color: var(--bg-color);
-        background-image: radial-gradient(#d4e7d4 1px, transparent 1px);
-        background-size: 20px 20px;
-        color: var(--text-main);
-        padding-bottom: 40px;
-        user-select: none;
-    }
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(#d4e7d4 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: var(--text-main);
+            padding-bottom: 40px;
+            user-select: none;
+        }
 
-    /* 頂部導覽列 */
-    header {
-        background-color: #ffffff;
-        border-bottom: 1px solid #e2e8f0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
+        /* 頂部導覽列 */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
 
-    .header-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 10px 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    .logo-area {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .logo-icon {
-        width: 36px;
-        height: 36px;
-        background: linear-gradient(135deg, #4CAF50, #2E7D32);
-        color: white;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
-        flex-shrink: 0;
-    }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+            flex-shrink: 0;
+        }
 
-    .logo-text h1 {
-        font-size: 15px;
-        font-weight: 800;
-        color: #1a202c;
-        line-height: 1.2;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        white-space: nowrap;
-    }
+        .logo-text h1 {
+            font-size: 15px;
+            font-weight: 800;
+            color: #1a202c;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
 
-    .tag {
-        font-size: 10px;
-        background-color: var(--primary-light);
-        color: var(--primary-dark);
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
+        .tag {
+            font-size: 10px;
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
 
-    .logo-text p {
-        font-size: 11px;
-        color: var(--text-muted);
-    }
+        .logo-text p {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
 
-    .header-actions {
-        display: flex;
-        gap: 6px;
-    }
+        .header-actions {
+            display: flex;
+            gap: 6px;
+        }
 
-    .btn {
-        border: none;
-        outline: none;
-        padding: 6px 10px;
-        border-radius: 8px;
-        font-size: 12px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        transition: all 0.2s;
-        white-space: nowrap;
-    }
+        .btn {
+            border: none;
+            outline: none;
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
 
-    .btn-primary {
-        background-color: var(--primary-light);
-        color: var(--primary-dark);
-        border: 1px solid #c8e6c9;
-    }
+        .btn-primary {
+            background-color: var(--primary-light);
+            color: var(--primary-dark);
+            border: 1px solid #c8e6c9;
+        }
 
-    .btn-secondary {
-        background-color: #edf2f7;
-        color: #4a5568;
-    }
+        .btn-secondary {
+            background-color: #edf2f7;
+            color: #4a5568;
+        }
 
-    /* 主要內容區 */
-    main {
-        max-width: 800px;
-        margin: 16px auto;
-        padding: 0 12px;
-    }
+        /* 主要內容區 */
+        main {
+            max-width: 800px;
+            margin: 16px auto;
+            padding: 0 12px;
+        }
 
-    /* 帳號切換區 */
-    .tabs-card {
-        background: white;
-        border-radius: 16px;
-        padding: 12px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        margin-bottom: 12px;
-    }
+        /* 花種設定區塊 */
+        .flower-setting-card {
+            background: white;
+            border-radius: 16px;
+            padding: 12px 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 12px;
+            border: 1px solid #e2e8f0;
+        }
 
-    .tabs-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 8px;
-        font-size: 12px;
-        font-weight: bold;
-        color: var(--text-muted);
-    }
+        .flower-setting-title {
+            font-size: 13px;
+            font-weight: bold;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
 
-    .tabs-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 6px;
-    }
+        .flower-input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
 
-    .tab-btn {
-        background: #f7fafc;
-        border: 1px solid #e2e8f0;
-        border-radius: 10px;
-        padding: 8px 2px;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        transition: all 0.2s;
-    }
+        .flower-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
 
-    .tab-btn.active {
-        background: var(--primary);
-        color: white;
-        border-color: var(--primary);
-        box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
-    }
+        .flower-input-group label {
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
 
-    .tab-name {
-        font-size: 11px;
-        font-weight: bold;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        width: 100%;
-    }
+        .flower-input-group input {
+            padding: 6px 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 13px;
+            outline: none;
+        }
 
-    .tab-percent {
-        font-size: 10px;
-        font-weight: bold;
-    }
+        .flower-input-group input:focus {
+            border-color: var(--primary);
+        }
 
-    .progress-bar-bg {
-        width: 80%;
-        height: 4px;
-        background: #e2e8f0;
-        border-radius: 2px;
-        overflow: hidden;
-    }
+        .btn-apply-flowers {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
 
-    .tab-btn.active .progress-bar-bg {
-        background: rgba(255,255,255,0.4);
-    }
+        /* 帳號切換區 */
+        .tabs-card {
+            background: white;
+            border-radius: 16px;
+            padding: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 12px;
+        }
 
-    .progress-bar-fill {
-        height: 100%;
-        background: var(--primary);
-        border-radius: 2px;
-        transition: width 0.3s;
-    }
+        .tabs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--text-muted);
+        }
 
-    .tab-btn.active .progress-bar-fill {
-        background: white;
-    }
+        .tabs-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+        }
 
-    /* 當前帳號狀態區 */
-    .account-card {
-        background: white;
-        border-radius: 16px;
-        padding: 12px 16px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        margin-bottom: 16px;
-    }
+        .tab-btn {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 8px 2px;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s;
+        }
 
-    .account-info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 8px;
-    }
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            box-shadow: 0 2px 6px rgba(76, 175, 80, 0.3);
+        }
 
-    .account-title {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex: 1;
-    }
+        .tab-name {
+            font-size: 11px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
 
-    .account-title input {
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        border-bottom: 1px transparent;
-        outline: none;
-        color: #2d3748;
-        width: 100%;
-        max-width: 180px;
-    }
+        .tab-percent {
+            font-size: 10px;
+            font-weight: bold;
+        }
 
-    .account-title input:focus {
-        border-bottom-color: var(--primary);
-    }
+        .progress-bar-bg {
+            width: 80%;
+            height: 4px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
 
-    .btn-reset {
-        background-color: #fff5f5;
-        color: #e53e3e;
-        border: 1px solid #fed7d7;
-        padding: 4px 8px;
-        font-size: 11px;
-        border-radius: 6px;
-        cursor: pointer;
-    }
+        .tab-btn.active .progress-bar-bg {
+            background: rgba(255,255,255,0.4);
+        }
 
-    .main-progress {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+            transition: width 0.3s;
+        }
 
-    .progress-text-row {
-        display: flex;
-        justify-content: space-between;
-        font-size: 11px;
-        color: var(--text-muted);
-        font-weight: 600;
-    }
+        .tab-btn.active .progress-bar-fill {
+            background: white;
+        }
 
-    .main-progress-bar-bg {
-        width: 100%;
-        height: 8px;
-        background: #edf2f7;
-        border-radius: 4px;
-        overflow: hidden;
-    }
+        /* 當前帳號狀態區 */
+        .account-card {
+            background: white;
+            border-radius: 16px;
+            padding: 12px 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 16px;
+        }
 
-    .main-progress-bar-fill {
-        height: 100%;
-        background: linear-gradient(90deg, #66bb6a, #4caf50);
-        border-radius: 4px;
-        transition: width 0.3s ease;
-    }
+        .account-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
 
-    /* 階段與任務區 */
-    .stage-card {
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        margin-bottom: 12px;
-        overflow: hidden;
-        border: 1px solid #edf2f7;
-    }
+        .account-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+        }
 
-    .stage-header {
-        padding: 10px 14px;
-        background: #f7fafc;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #edf2f7;
-    }
+        .account-title input {
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-bottom: 1px transparent;
+            outline: none;
+            color: #2d3748;
+            width: 100%;
+            max-width: 180px;
+        }
 
-    .stage-title-group {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+        .account-title input:focus {
+            border-bottom-color: var(--primary);
+        }
 
-    .stage-badge {
-        width: 24px;
-        height: 24px;
-        background: var(--primary-light);
-        color: var(--primary-dark);
-        font-weight: bold;
-        font-size: 12px;
-        border-radius: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .btn-reset {
+            background-color: #fff5f5;
+            color: #e53e3e;
+            border: 1px solid #fed7d7;
+            padding: 4px 8px;
+            font-size: 11px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
 
-    .stage-title {
-        font-size: 14px;
-        font-weight: bold;
-        color: #2d3748;
-    }
+        .main-progress {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
 
-    .stage-actions {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+        .progress-text-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
 
-    .stage-counter {
-        font-size: 11px;
-        color: var(--text-muted);
-    }
+        .main-progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: #edf2f7;
+            border-radius: 4px;
+            overflow: hidden;
+        }
 
-    .btn-stage-toggle {
-        font-size: 10px;
-        padding: 3px 8px;
-        border-radius: 6px;
-        background: var(--primary-light);
-        color: var(--primary-dark);
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
-    }
+        .main-progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #66bb6a, #4caf50);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
 
-    .tasks-grid {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
+        /* 階段與任務區 */
+        .stage-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 12px;
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+        }
 
-    .task-item {
-        background: #f8fafc;
-        border: 1px solid #edf2f7;
-        padding: 10px 12px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        transition: background 0.15s;
-    }
+        .stage-header {
+            padding: 10px 14px;
+            background: #f7fafc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #edf2f7;
+        }
 
-    .task-item.completed {
-        background: #f0fdf4;
-        border-color: #bbf7d0;
-    }
+        .stage-title-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .task-label {
-        font-size: 13px;
-        font-weight: 500;
-        color: #2d3748;
-        flex: 1;
-        padding-right: 8px;
-    }
+        .stage-badge {
+            width: 24px;
+            height: 24px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .task-item.completed .task-label {
-        text-decoration: line-through;
-        color: #a0aec0;
-    }
+        .stage-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2d3748;
+        }
 
-    /* 多重勾選框區域 */
-    .checkbox-group {
-        display: flex;
-        gap: 6px;
-        align-items: center;
-    }
+        .stage-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-    .custom-checkbox {
-        width: 22px;
-        height: 22px;
-        border: 2px solid #cbd5e0;
-        border-radius: 6px;
-        background: white;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s;
-    }
+        .stage-counter {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
 
-    .custom-checkbox.checked {
-        background: var(--primary);
-        border-color: var(--primary);
-        color: white;
-    }
+        .btn-stage-toggle {
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
 
-    .custom-checkbox.checked::after {
-        content: '✓';
-        font-size: 14px;
-        font-weight: bold;
-    }
+        .tasks-grid {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
 
-    /* 彈出視窗 Modal */
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 16px;
-        z-index: 200;
-    }
+        .task-item {
+            background: #f8fafc;
+            border: 1px solid #edf2f7;
+            padding: 10px 12px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s;
+        }
 
-    .modal-overlay.hidden {
-        display: none;
-    }
+        .task-item.completed {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
 
-    .modal-body {
-        background: white;
-        border-radius: 16px;
-        width: 100%;
-        max-width: 500px;
-        max-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
+        .task-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: #2d3748;
+            flex: 1;
+            padding-right: 8px;
+        }
 
-    .modal-header {
-        padding: 12px 16px;
-        border-bottom: 1px solid #edf2f7;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-weight: bold;
-    }
+        .task-item.completed .task-label {
+            text-decoration: line-through;
+            color: #a0aec0;
+        }
 
-    .modal-content {
-        padding: 16px;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+        /* 多重勾選框區域 */
+        .checkbox-group {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
 
-    .overview-card {
-        background: #f7fafc;
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid #e2e8f0;
-    }
+        .custom-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
 
-    /* Toast 提示 */
-    #toast {
-        position: fixed;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(26, 32, 44, 0.9);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 12px;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.3s;
-        z-index: 300;
-    }
+        .custom-checkbox.checked {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
 
-    #toast.show {
-        opacity: 1;
-    }
-</style>
+        .custom-checkbox.checked::after {
+            content: '✓';
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 彈出視窗 Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 200;
+        }
+
+        .modal-overlay.hidden {
+            display: none;
+        }
+
+        .modal-body {
+            background: white;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 500px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .modal-content {
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .overview-card {
+            background: #f7fafc;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Toast 提示 */
+        #toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(26, 32, 44, 0.9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 300;
+        }
+
+        #toast.show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
-<!-- 頂部導覽列 -->
-<header>
-    <div class="header-container">
-        <div class="logo-area">
-            <div class="logo-icon"><i class="fa-solid fa-seedling"></i></div>
-            <div class="logo-text">
-                <h1>皮克敏 Bloom <span class="tag">5帳號版</span></h1>
-                <p>多帳號對照 • 自動儲存</p>
-            </div>
-        </div>
-        <div class="header-actions">
-            <button onclick="toggleDashboardModal()" class="btn btn-primary">
-                <i class="fa-solid fa-chart-pie"></i> 總覽
-            </button>
-            <button onclick="exportData()" class="btn btn-secondary" title="匯出">
-                <i class="fa-solid fa-download"></i>
-            </button>
-            <label class="btn btn-secondary" title="匯入" style="margin:0;">
-                <i class="fa-solid fa-upload"></i>
-                <input type="file" id="importFileInput" accept=".json" style="display:none;" onchange="importData(event)">
-            </label>
-        </div>
-    </div>
-</header>
-
-<!-- 主要內容區 -->
-<main>
-    <!-- 帳號切換區 -->
-    <div class="tabs-card">
-        <div class="tabs-header">
-            <span>切換帳號</span>
-            <span id="overallProgressText" style="color:var(--primary-dark);">進度: 0%</span>
-        </div>
-        <div id="accountTabs" class="tabs-grid"></div>
-    </div>
-
-    <!-- 當前帳號資訊 -->
-    <div class="account-card">
-        <div class="account-info">
-            <div class="account-title">
-                <input type="text" id="accountNameInput" onchange="updateAccountName(this.value)">
-                <i class="fa-solid fa-pen" style="font-size:12px; color:#a0aec0;"></i>
-            </div>
-            <button onclick="resetCurrentAccount()" class="btn-reset">
-                <i class="fa-solid fa-rotate-left"></i> 重置
-            </button>
-        </div>
-        <div class="main-progress">
-            <div class="progress-text-row">
-                <span>當前帳號進度</span>
-                <span id="activeAccountPercent" style="color:var(--primary); font-weight:bold;">0%</span>
-            </div>
-            <div class="main-progress-bar-bg">
-                <div id="activeAccountProgressBar" class="main-progress-bar-fill" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 關卡與任務列表 -->
-    <div id="stagesContainer"></div>
-</main>
-
-<!-- 總覽彈出視窗 -->
-<div id="dashboardModal" class="modal-overlay hidden">
-    <div class="modal-body">
-        <div class="modal-header">
-            <span><i class="fa-solid fa-users" style="color:var(--primary);"></i> 所有帳號進度總覽</span>
-            <i class="fa-solid fa-xmark" style="cursor:pointer;" onclick="toggleDashboardModal()"></i>
-        </div>
-        <div id="dashboardContent" class="modal-content"></div>
-    </div>
-</div>
-
-<!-- Toast 提示視窗 -->
-<div id="toast">已更新進度</div>
-
-<script>
-    const STAGE_DATA = [
-        {
-            stage: 1,
-            title: "第 1 階段",
-            substeps: [
-                { id: "1_1_1", name: "1.1 走1000步", count: 1 },
-                { id: "1_2_1", name: "2.1 培育2隻皮克敏", count: 1 },
-                { id: "1_3_1", name: "3.1 完成2個探險", count: 1 },
-                { id: "1_4_1", name: "4.1 種1000朵花", count: 1 },
-                { id: "1_4_2", name: "4.2 摧毀2棵蘑菇", count: 2 }
-            ]
-        },
-        {
-            stage: 2,
-            title: "第 2 階段",
-            substeps: [
-                { id: "2_1_1", name: "1.1 走2000步", count: 1 },
-                { id: "2_2_1", name: "2.1 種1000朵花", count: 1 },
-                { id: "2_2_2", name: "2.2 摧毀2棵蘑菇", count: 2 },
-                { id: "2_3_1", name: "3.1 培育3隻皮克敏", count: 1 },
-                { id: "2_3_2", name: "3.2 摧毀3棵蘑菇", count: 3 },
-                { id: "2_4_1", name: "4.1 種500朵主花", count: 1 },
-                { id: "2_4_2", name: "4.2 摧毀4棵蘑菇", count: 4 }
-            ]
-        },
-        {
-            stage: 3,
-            title: "第 3 階段",
-            substeps: [
-                { id: "3_1_1", name: "1.1 走2000步", count: 1 },
-                { id: "3_1_2", name: "1.2 完成2個探險", count: 1 },
-                { id: "3_2_1", name: "2.1 種1500朵白色副花", count: 1 },
-                { id: "3_2_2", name: "2.2 摧毀3棵蘑菇", count: 3 },
-                { id: "3_3_1", name: "3.1 種1500朵紅色副花", count: 1 },
-                { id: "3_3_2", name: "3.2 摧毀4棵蘑菇", count: 4 },
-                { id: "3_4_1", name: "4.1 種1500朵黃色副花", count: 1 },
-                { id: "3_4_2", name: "4.2 種2000朵紅色主花", count: 1 },
-                { id: "3_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
-            ]
-        },
-        {
-            stage: 4,
-            title: "第 4 階段",
-            substeps: [
-                { id: "4_1_1", name: "1.1 完成3個探險", count: 1 },
-                { id: "4_1_2", name: "1.2 摧毀3棵蘑菇", count: 3 },
-                { id: "4_2_1", name: "2.1 種2000朵白色主花", count: 1 },
-                { id: "4_2_2", name: "2.2 摧毀4棵蘑菇", count: 4 },
-                { id: "4_3_1", name: "3.1 種2000朵黃色主花", count: 1 },
-                { id: "4_3_2", name: "3.2 種1000朵藍色副花", count: 1 },
-                { id: "4_3_3", name: "3.3 摧毀4棵蘑菇", count: 4 },
-                { id: "4_4_1", name: "4.1 種2000朵藍色主花", count: 1 },
-                { id: "4_4_2", name: "4.2 種2500朵副花", count: 1 },
-                { id: "4_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
-            ]
-        }
-    ];
-
-    const TOTAL_TASKS_COUNT = STAGE_DATA.reduce((acc, stage) => acc + stage.substeps.length, 0);
-
-    let appData = {
-        activeAccountId: 1,
-        accounts: [
-            { id: 1, name: "帳號 1", tasks: {} },
-            { id: 2, name: "帳號 2", tasks: {} },
-            { id: 3, name: "帳號 3", tasks: {} },
-            { id: 4, name: "帳號 4", tasks: {} },
-            { id: 5, name: "帳號 5", tasks: {} }
-        ]
-    };
-
-    window.addEventListener('DOMContentLoaded', () => {
-        loadFromLocalStorage();
-        renderApp();
-    });
-
-    function loadFromLocalStorage() {
-        const saved = localStorage.getItem('pikmin_tracker_data');
-        if (saved) {
-            try {
-                const parsed = JSON.parse(saved);
-                if (parsed.accounts && parsed.accounts.length === 5) {
-                    appData = parsed;
-                }
-            } catch (e) {}
-        }
-    }
-
-    function saveToLocalStorage() {
-        localStorage.setItem('pikmin_tracker_data', JSON.stringify(appData));
-    }
-
-    function renderApp() {
-        renderTabs();
-        renderActiveAccountHeader();
-        renderStages();
-    }
-
-    function isTaskFullyCompleted(accTasks, taskId, totalCount) {
-        const progress = accTasks[taskId] || 0;
-        return progress >= totalCount;
-    }
-
-    function renderTabs() {
-        const container = document.getElementById('accountTabs');
-        container.innerHTML = '';
-
-        appData.accounts.forEach(acc => {
-            const isActive = acc.id === appData.activeAccountId;
-            let completedCount = 0;
-
-            STAGE_DATA.forEach(stage => {
-                stage.substeps.forEach(sub => {
-                    if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
-                        completedCount++;
-                    }
-                });
-            });
-
-            const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
-
-            const tab = document.createElement('div');
-            tab.className = `tab-btn ${isActive ? 'active' : ''}`;
-            tab.onclick = () => switchAccount(acc.id);
-
-            tab.innerHTML = `
-                <div class="tab-name">${escapeHtml(acc.name)}</div>
-                <div class="tab-percent">${percent}%</div>
-                <div class="progress-bar-bg">
-                    <div class="progress-bar-fill" style="width: ${percent}%"></div>
+    <!-- 頂部導覽列 -->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="logo-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="logo-text">
+                    <h1>皮克敏 Bloom <span class="tag">5帳號版</span></h1>
+                    <p>多帳號對照 • 自動儲存</p>
                 </div>
-            `;
-            container.appendChild(tab);
+            </div>
+            <div class="header-actions">
+                <button onclick="toggleDashboardModal()" class="btn btn-primary">
+                    <i class="fa-solid fa-chart-pie"></i> 總覽
+                </button>
+                <button onclick="exportData()" class="btn btn-secondary" title="匯出">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                <label class="btn btn-secondary" title="匯入" style="margin:0;">
+                    <i class="fa-solid fa-upload"></i>
+                    <input type="file" id="importFileInput" accept=".json" style="display:none;" onchange="importData(event)">
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main>
+        <!-- 活動花種設定區 -->
+        <div class="flower-setting-card">
+            <div class="flower-setting-title">
+                <i class="fa-solid fa-fan"></i> 本月活動花種自訂設定
+            </div>
+            <div class="flower-input-grid">
+                <div class="flower-input-group">
+                    <label>主花名稱：</label>
+                    <input type="text" id="mainFlowerInput" placeholder="例如：桂花">
+                </div>
+                <div class="flower-input-group">
+                    <label>副花名稱：</label>
+                    <input type="text" id="subFlowerInput" placeholder="例如：大麗花">
+                </div>
+            </div>
+            <button onclick="applyFlowerNames()" class="btn-apply-flowers">
+                <i class="fa-solid fa-check"></i> 儲存並套用花種
+            </button>
+        </div>
+
+        <!-- 帳號切換區 -->
+        <div class="tabs-card">
+            <div class="tabs-header">
+                <span>切換帳號</span>
+                <span id="overallProgressText" style="color:var(--primary-dark);">進度: 0%</span>
+            </div>
+            <div id="accountTabs" class="tabs-grid"></div>
+        </div>
+
+        <!-- 當前帳號資訊 -->
+        <div class="account-card">
+            <div class="account-info">
+                <div class="account-title">
+                    <input type="text" id="accountNameInput" onchange="updateAccountName(this.value)">
+                    <i class="fa-solid fa-pen" style="font-size:12px; color:#a0aec0;"></i>
+                </div>
+                <button onclick="resetCurrentAccount()" class="btn-reset">
+                    <i class="fa-solid fa-rotate-left"></i> 重置
+                </button>
+            </div>
+            <div class="main-progress">
+                <div class="progress-text-row">
+                    <span>當前帳號進度</span>
+                    <span id="activeAccountPercent" style="color:var(--primary); font-weight:bold;">0%</span>
+                </div>
+                <div class="main-progress-bar-bg">
+                    <div id="activeAccountProgressBar" class="main-progress-bar-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 關卡與任務列表 -->
+        <div id="stagesContainer"></div>
+    </main>
+
+    <!-- 總覽彈出視窗 -->
+    <div id="dashboardModal" class="modal-overlay hidden">
+        <div class="modal-body">
+            <div class="modal-header">
+                <span><i class="fa-solid fa-users" style="color:var(--primary);"></i> 所有帳號進度總覽</span>
+                <i class="fa-solid fa-xmark" style="cursor:pointer;" onclick="toggleDashboardModal()"></i>
+            </div>
+            <div id="dashboardContent" class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Toast 提示視窗 -->
+    <div id="toast">已更新進度</div>
+
+    <script>
+        const STAGE_DATA = [
+            {
+                stage: 1,
+                title: "第 1 階段",
+                substeps: [
+                    { id: "1_1_1", name: "1.1 走1000步", count: 1 },
+                    { id: "1_2_1", name: "2.1 培育2隻皮克敏", count: 1 },
+                    { id: "1_3_1", name: "3.1 完成2個探險", count: 1 },
+                    { id: "1_4_1", name: "4.1 種1000朵花", count: 1 },
+                    { id: "1_4_2", name: "4.2 摧毀2棵蘑菇", count: 2 }
+                ]
+            },
+            {
+                stage: 2,
+                title: "第 2 階段",
+                substeps: [
+                    { id: "2_1_1", name: "1.1 走2000步", count: 1 },
+                    { id: "2_2_1", name: "2.1 種1000朵花", count: 1 },
+                    { id: "2_2_2", name: "2.2 摧毀2棵蘑菇", count: 2 },
+                    { id: "2_3_1", name: "3.1 培育3隻皮克敏", count: 1 },
+                    { id: "2_3_2", name: "3.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "2_4_1", name: "4.1 種500朵主花", count: 1 },
+                    { id: "2_4_2", name: "4.2 摧毀4棵蘑菇", count: 4 }
+                ]
+            },
+            {
+                stage: 3,
+                title: "第 3 階段",
+                substeps: [
+                    { id: "3_1_1", name: "1.1 走2000步", count: 1 },
+                    { id: "3_1_2", name: "1.2 完成2個探險", count: 1 },
+                    { id: "3_2_1", name: "2.1 種1500朵白色副花", count: 1 },
+                    { id: "3_2_2", name: "2.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "3_3_1", name: "3.1 種1500朵紅色副花", count: 1 },
+                    { id: "3_3_2", name: "3.2 摧毀4棵蘑菇", count: 4 },
+                    { id: "3_4_1", name: "4.1 種1500朵黃色副花", count: 1 },
+                    { id: "3_4_2", name: "4.2 種2000朵紅色主花", count: 1 },
+                    { id: "3_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
+                ]
+            },
+            {
+                stage: 4,
+                title: "第 4 階段",
+                substeps: [
+                    { id: "4_1_1", name: "1.1 完成3個探險", count: 1 },
+                    { id: "4_1_2", name: "1.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "4_2_1", name: "2.1 種2000朵白色主花", count: 1 },
+                    { id: "4_2_2", name: "2.2 摧毀4棵蘑菇", count: 4 },
+                    { id: "4_3_1", name: "3.1 種2000朵黃色主花", count: 1 },
+                    { id: "4_3_2", name: "3.2 種1000朵藍色副花", count: 1 },
+                    { id: "4_3_3", name: "3.3 摧毀4棵蘑菇", count: 4 },
+                    { id: "4_4_1", name: "4.1 種2000朵藍色主花", count: 1 },
+                    { id: "4_4_2", name: "4.2 種2500朵副花", count: 1 },
+                    { id: "4_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
+                ]
+            }
+        ];
+
+        const TOTAL_TASKS_COUNT = STAGE_DATA.reduce((acc, stage) => acc + stage.substeps.length, 0);
+
+        let appData = {
+            activeAccountId: 1,
+            mainFlower: "",
+            subFlower: "",
+            accounts: [
+                { id: 1, name: "帳號 1", tasks: {} },
+                { id: 2, name: "帳號 2", tasks: {} },
+                { id: 3, name: "帳號 3", tasks: {} },
+                { id: 4, name: "帳號 4", tasks: {} },
+                { id: 5, name: "帳號 5", tasks: {} }
+            ]
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFromLocalStorage();
+            renderApp();
         });
-    }
 
-    function renderActiveAccountHeader() {
-        const currentAcc = getActiveAccount();
-        document.getElementById('accountNameInput').value = currentAcc.name;
+        function loadFromLocalStorage() {
+            const saved = localStorage.getItem('pikmin_tracker_data');
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.accounts && parsed.accounts.length === 5) {
+                        appData = parsed;
+                    }
+                } catch (e) {}
+            }
+            document.getElementById('mainFlowerInput').value = appData.mainFlower || "";
+            document.getElementById('subFlowerInput').value = appData.subFlower || "";
+        }
 
-        let completedCount = 0;
-        STAGE_DATA.forEach(stage => {
-            stage.substeps.forEach(sub => {
-                if (isTaskFullyCompleted(currentAcc.tasks || {}, sub.id, sub.count)) {
-                    completedCount++;
-                }
-            });
-        });
+        function saveToLocalStorage() {
+            localStorage.setItem('pikmin_tracker_data', JSON.stringify(appData));
+        }
 
-        const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
+        function applyFlowerNames() {
+            appData.mainFlower = document.getElementById('mainFlowerInput').value.trim();
+            appData.subFlower = document.getElementById('subFlowerInput').value.trim();
+            saveToLocalStorage();
+            renderStages();
+            showToast("已更新花種設定！");
+        }
 
-        document.getElementById('activeAccountPercent').textContent = `${percent}% (${completedCount}/${TOTAL_TASKS_COUNT})`;
-        document.getElementById('activeAccountProgressBar').style.width = `${percent}%`;
-        document.getElementById('overallProgressText').textContent = `完成度: ${percent}%`;
-    }
+        function renderApp() {
+            renderTabs();
+            renderActiveAccountHeader();
+            renderStages();
+        }
 
-    function renderStages() {
-        const container = document.getElementById('stagesContainer');
-        container.innerHTML = '';
+        function isTaskFullyCompleted(accTasks, taskId, totalCount) {
+            const progress = accTasks[taskId] || 0;
+            return progress >= totalCount;
+        }
 
-        const currentAcc = getActiveAccount();
+        function renderTabs() {
+            const container = document.getElementById('accountTabs');
+            container.innerHTML = '';
 
-        STAGE_DATA.forEach(stageInfo => {
-            const totalInStage = stageInfo.substeps.length;
-            let doneInStage = 0;
+            appData.accounts.forEach(acc => {
+                const isActive = acc.id === appData.activeAccountId;
+                let completedCount = 0;
 
-            stageInfo.substeps.forEach(s => {
-                if (isTaskFullyCompleted(currentAcc.tasks || {}, s.id, s.count)) {
-                    doneInStage++;
-                }
-            });
-            const isStageComplete = doneInStage === totalInStage;
+                STAGE_DATA.forEach(stage => {
+                    stage.substeps.forEach(sub => {
+                        if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
+                            completedCount++;
+                        }
+                    });
+                });
 
-            const stageCard = document.createElement('div');
-            stageCard.className = 'stage-card';
+                const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
 
-            let tasksHtml = '';
-            stageInfo.substeps.forEach(substep => {
-                const currentProgress = currentAcc.tasks[substep.id] || 0;
-                const isFullyDone = currentProgress >= substep.count;
+                const tab = document.createElement('div');
+                tab.className = `tab-btn ${isActive ? 'active' : ''}`;
+                tab.onclick = () => switchAccount(acc.id);
 
-                let boxesHtml = '';
-                for (let i = 1; i <= substep.count; i++) {
-                    const isChecked = currentProgress >= i;
-                    boxesHtml += `
-                        <div class="custom-checkbox ${isChecked ? 'checked' : ''}" 
-                             onclick="toggleTaskSubCount('${substep.id}', ${i}, ${substep.count})">
-                        </div>
-                    `;
-                }
-
-                tasksHtml += `
-                    <div class="task-item ${isFullyDone ? 'completed' : ''}">
-                        <span class="task-label">${substep.name}</span>
-                        <div class="checkbox-group">${boxesHtml}</div>
+                tab.innerHTML = `
+                    <div class="tab-name">${escapeHtml(acc.name)}</div>
+                    <div class="tab-percent">${percent}%</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: ${percent}%"></div>
                     </div>
                 `;
-            });
-
-            stageCard.innerHTML = `
-                <div class="stage-header">
-                    <div class="stage-title-group">
-                        <div class="stage-badge">${stageInfo.stage}</div>
-                        <div class="stage-title">${stageInfo.title}</div>
-                    </div>
-                    <div class="stage-actions">
-                        <span class="stage-counter">${doneInStage}/${totalInStage}</span>
-                        <button class="btn-stage-toggle" onclick="toggleWholeStage(${stageInfo.stage}, ${!isStageComplete})">
-                            ${isStageComplete ? '取消全選' : '一鍵全選'}
-                        </button>
-                    </div>
-                </div>
-                <div class="tasks-grid">${tasksHtml}</div>
-            `;
-
-            container.appendChild(stageCard);
-        });
-    }
-
-    function getActiveAccount() {
-        return appData.accounts.find(a => a.id === appData.activeAccountId) || appData.accounts[0];
-    }
-
-    function switchAccount(id) {
-        appData.activeAccountId = id;
-        saveToLocalStorage();
-        renderApp();
-    }
-
-    function toggleTaskSubCount(taskId, boxIndex, maxCount) {
-        const acc = getActiveAccount();
-        if (!acc.tasks) acc.tasks = {};
-
-        const current = acc.tasks[taskId] || 0;
-        if (current >= boxIndex) {
-            acc.tasks[taskId] = boxIndex - 1;
-        } else {
-            acc.tasks[taskId] = boxIndex;
-        }
-
-        saveToLocalStorage();
-        renderApp();
-    }
-
-    function toggleWholeStage(stageNum, setComplete) {
-        const acc = getActiveAccount();
-        if (!acc.tasks) acc.tasks = {};
-
-        const stageInfo = STAGE_DATA.find(s => s.stage === stageNum);
-        if (stageInfo) {
-            stageInfo.substeps.forEach(sub => {
-                acc.tasks[sub.id] = setComplete ? sub.count : 0;
+                container.appendChild(tab);
             });
         }
-        saveToLocalStorage();
-        renderApp();
-        showToast(setComplete ? `第 ${stageNum} 階段已全選` : `已取消全選`);
-    }
 
-    function updateAccountName(newName) {
-        const acc = getActiveAccount();
-        if (newName.trim()) {
-            acc.name = newName.trim();
-            saveToLocalStorage();
-            renderTabs();
-            showToast("名稱已更新");
-        }
-    }
+        function renderActiveAccountHeader() {
+            const currentAcc = getActiveAccount();
+            document.getElementById('accountNameInput').value = currentAcc.name;
 
-    function resetCurrentAccount() {
-        const acc = getActiveAccount();
-        if (confirm(`確定重置「${acc.name}」嗎？`)) {
-            acc.tasks = {};
-            saveToLocalStorage();
-            renderApp();
-            showToast(`已重置 ${acc.name}`);
-        }
-    }
-
-    function toggleDashboardModal() {
-        const modal = document.getElementById('dashboardModal');
-        modal.classList.toggle('hidden');
-        if (!modal.classList.contains('hidden')) {
-            renderDashboardContent();
-        }
-    }
-
-    function renderDashboardContent() {
-        const container = document.getElementById('dashboardContent');
-        container.innerHTML = '';
-
-        appData.accounts.forEach(acc => {
             let completedCount = 0;
             STAGE_DATA.forEach(stage => {
                 stage.substeps.forEach(sub => {
-                    if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
+                    if (isTaskFullyCompleted(currentAcc.tasks || {}, sub.id, sub.count)) {
                         completedCount++;
                     }
                 });
@@ -892,59 +839,217 @@
 
             const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
 
-            const card = document.createElement('div');
-            card.className = "overview-card";
-            card.innerHTML = `
-                <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:bold; margin-bottom:4px;">
-                    <span>${escapeHtml(acc.name)}</span>
-                    <span style="color:var(--primary);">${percent}%</span>
-                </div>
-                <div class="progress-bar-bg" style="height:6px; margin-bottom:6px; width:100%;">
-                    <div class="progress-bar-fill" style="width:${percent}%"></div>
-                </div>
-            `;
-            container.appendChild(card);
-        });
-    }
+            document.getElementById('activeAccountPercent').textContent = `${percent}% (${completedCount}/${TOTAL_TASKS_COUNT})`;
+            document.getElementById('activeAccountProgressBar').style.width = `${percent}%`;
+            document.getElementById('overallProgressText').textContent = `完成度: ${percent}%`;
+        }
 
-    function exportData() {
-        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
-        const a = document.createElement('a');
-        a.href = dataStr;
-        a.download = `pikmin_backup_${new Date().toISOString().slice(0,10)}.json`;
-        a.click();
-        showToast("備份已下載");
-    }
+        function renderStages() {
+            const container = document.getElementById('stagesContainer');
+            container.innerHTML = '';
 
-    function importData(e) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            try {
-                const parsed = JSON.parse(event.target.result);
-                if (parsed && parsed.accounts) {
-                    appData = parsed;
-                    saveToLocalStorage();
-                    renderApp();
-                    showToast("匯入成功！");
-                }
-            } catch (err) {
-                alert("檔案格式不正確");
+            const currentAcc = getActiveAccount();
+            const mainFlower = appData.mainFlower || "主花";
+            const subFlower = appData.subFlower || "副花";
+
+            STAGE_DATA.forEach(stageInfo => {
+                const totalInStage = stageInfo.substeps.length;
+                let doneInStage = 0;
+
+                stageInfo.substeps.forEach(s => {
+                    if (isTaskFullyCompleted(currentAcc.tasks || {}, s.id, s.count)) {
+                        doneInStage++;
+                    }
+                });
+                const isStageComplete = doneInStage === totalInStage;
+
+                const stageCard = document.createElement('div');
+                stageCard.className = 'stage-card';
+
+                let tasksHtml = '';
+                stageInfo.substeps.forEach(substep => {
+                    const currentProgress = currentAcc.tasks[substep.id] || 0;
+                    const isFullyDone = currentProgress >= substep.count;
+
+                    // 替換主花與副花名稱
+                    let displayName = substep.name
+                        .replace(/主花/g, mainFlower)
+                        .replace(/副花/g, subFlower);
+
+                    let boxesHtml = '';
+                    for (let i = 1; i <= substep.count; i++) {
+                        const isChecked = currentProgress >= i;
+                        boxesHtml += `
+                            <div class="custom-checkbox ${isChecked ? 'checked' : ''}" 
+                                 onclick="toggleTaskSubCount('${substep.id}', ${i}, ${substep.count})">
+                            </div>
+                        `;
+                    }
+
+                    tasksHtml += `
+                        <div class="task-item ${isFullyDone ? 'completed' : ''}">
+                            <span class="task-label">${displayName}</span>
+                            <div class="checkbox-group">${boxesHtml}</div>
+                        </div>
+                    `;
+                });
+
+                stageCard.innerHTML = `
+                    <div class="stage-header">
+                        <div class="stage-title-group">
+                            <div class="stage-badge">${stageInfo.stage}</div>
+                            <div class="stage-title">${stageInfo.title}</div>
+                        </div>
+                        <div class="stage-actions">
+                            <span class="stage-counter">${doneInStage}/${totalInStage}</span>
+                            <button class="btn-stage-toggle" onclick="toggleWholeStage(${stageInfo.stage}, ${!isStageComplete})">
+                                ${isStageComplete ? '取消全選' : '一鍵全選'}
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tasks-grid">${tasksHtml}</div>
+                `;
+
+                container.appendChild(stageCard);
+            });
+        }
+
+        function getActiveAccount() {
+            return appData.accounts.find(a => a.id === appData.activeAccountId) || appData.accounts[0];
+        }
+
+        function switchAccount(id) {
+            appData.activeAccountId = id;
+            saveToLocalStorage();
+            renderApp();
+        }
+
+        function toggleTaskSubCount(taskId, boxIndex, maxCount) {
+            const acc = getActiveAccount();
+            if (!acc.tasks) acc.tasks = {};
+
+            const current = acc.tasks[taskId] || 0;
+            if (current >= boxIndex) {
+                acc.tasks[taskId] = boxIndex - 1;
+            } else {
+                acc.tasks[taskId] = boxIndex;
             }
-        };
-        if (e.target.files[0]) reader.readAsText(e.target.files[0]);
-    }
 
-    function showToast(msg) {
-        const toast = document.getElementById('toast');
-        toast.textContent = msg;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
-    }
+            saveToLocalStorage();
+            renderApp();
+        }
 
-    function escapeHtml(str) {
-        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-    }
-</script>
+        function toggleWholeStage(stageNum, setComplete) {
+            const acc = getActiveAccount();
+            if (!acc.tasks) acc.tasks = {};
+
+            const stageInfo = STAGE_DATA.find(s => s.stage === stageNum);
+            if (stageInfo) {
+                stageInfo.substeps.forEach(sub => {
+                    acc.tasks[sub.id] = setComplete ? sub.count : 0;
+                });
+            }
+            saveToLocalStorage();
+            renderApp();
+            showToast(setComplete ? `第 ${stageNum} 階段已全選` : `已取消全選`);
+        }
+
+        function updateAccountName(newName) {
+            const acc = getActiveAccount();
+            if (newName.trim()) {
+                acc.name = newName.trim();
+                saveToLocalStorage();
+                renderTabs();
+                showToast("名稱已更新");
+            }
+        }
+
+        function resetCurrentAccount() {
+            const acc = getActiveAccount();
+            if (confirm(`確定重置「${acc.name}」嗎？`)) {
+                acc.tasks = {};
+                saveToLocalStorage();
+                renderApp();
+                showToast(`已重置 ${acc.name}`);
+            }
+        }
+
+        function toggleDashboardModal() {
+            const modal = document.getElementById('dashboardModal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                renderDashboardContent();
+            }
+        }
+
+        function renderDashboardContent() {
+            const container = document.getElementById('dashboardContent');
+            container.innerHTML = '';
+
+            appData.accounts.forEach(acc => {
+                let completedCount = 0;
+                STAGE_DATA.forEach(stage => {
+                    stage.substeps.forEach(sub => {
+                        if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
+                            completedCount++;
+                        }
+                    });
+                });
+
+                const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
+
+                const card = document.createElement('div');
+                card.className = "overview-card";
+                card.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:bold; margin-bottom:4px;">
+                        <span>${escapeHtml(acc.name)}</span>
+                        <span style="color:var(--primary);">${percent}%</span>
+                    </div>
+                    <div class="progress-bar-bg" style="height:6px; margin-bottom:6px; width:100%;">
+                        <div class="progress-bar-fill" style="width:${percent}%"></div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function exportData() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(appData, null, 2));
+            const a = document.createElement('a');
+            a.href = dataStr;
+            a.download = `pikmin_backup_${new Date().toISOString().slice(0,10)}.json`;
+            a.click();
+            showToast("備份已下載");
+        }
+
+        function importData(e) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    const parsed = JSON.parse(event.target.result);
+                    if (parsed && parsed.accounts) {
+                        appData = parsed;
+                        saveToLocalStorage();
+                        renderApp();
+                        showToast("匯入成功！");
+                    }
+                } catch (err) {
+                    alert("檔案格式不正確");
+                }
+            };
+            if (e.target.files[0]) reader.readAsText(e.target.files[0]);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+        }
+    </script>
 </body>
 </html>
-
