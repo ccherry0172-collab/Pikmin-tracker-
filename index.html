@@ -72,16 +72,18 @@
             justify-content: center;
             font-size: 18px;
             box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+            flex-shrink: 0;
         }
 
         .logo-text h1 {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
             color: #1a202c;
             line-height: 1.2;
             display: flex;
             align-items: center;
             gap: 6px;
+            white-space: nowrap;
         }
 
         .tag {
@@ -91,6 +93,7 @@
             padding: 2px 6px;
             border-radius: 4px;
             font-weight: bold;
+            white-space: nowrap;
         }
 
         .logo-text p {
@@ -106,7 +109,7 @@
         .btn {
             border: none;
             outline: none;
-            padding: 6px 12px;
+            padding: 6px 10px;
             border-radius: 8px;
             font-size: 12px;
             font-weight: bold;
@@ -115,6 +118,7 @@
             align-items: center;
             gap: 4px;
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -164,7 +168,7 @@
             background: #f7fafc;
             border: 1px solid #e2e8f0;
             border-radius: 10px;
-            padding: 8px 4px;
+            padding: 8px 2px;
             text-align: center;
             cursor: pointer;
             display: flex;
@@ -196,7 +200,7 @@
         }
 
         .progress-bar-bg {
-            width: 100%;
+            width: 80%;
             height: 4px;
             background: #e2e8f0;
             border-radius: 2px;
@@ -363,8 +367,8 @@
 
         .tasks-grid {
             padding: 10px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 8px;
         }
 
@@ -376,18 +380,18 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            cursor: pointer;
             transition: background 0.15s;
         }
 
-        .task-item:active {
-            background: var(--primary-light);
+        .task-item.completed {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
         }
 
         .task-label {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 500;
-            color: #4a5568;
+            color: #2d3748;
             flex: 1;
             padding-right: 8px;
         }
@@ -397,11 +401,36 @@
             color: #a0aec0;
         }
 
-        .task-checkbox {
-            width: 18px;
-            height: 18px;
-            accent-color: var(--primary);
+        /* 多重勾選框區域 */
+        .checkbox-group {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .custom-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            background: white;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .custom-checkbox.checked {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .custom-checkbox.checked::after {
+            content: '✓';
+            font-size: 14px;
+            font-weight: bold;
         }
 
         /* 彈出視窗 Modal */
@@ -565,55 +594,55 @@
                 stage: 1,
                 title: "第 1 階段",
                 substeps: [
-                    { id: "1_1_1", name: "1.1 走1000步" },
-                    { id: "1_2_1", name: "2.1 培育2隻皮克敏" },
-                    { id: "1_3_1", name: "3.1 完成2個探險" },
-                    { id: "1_4_1", name: "4.1 種1000朵花" },
-                    { id: "1_4_2", name: "4.2 摧毀2棵蘑菇" }
+                    { id: "1_1_1", name: "1.1 走1000步", count: 1 },
+                    { id: "1_2_1", name: "2.1 培育2隻皮克敏", count: 1 },
+                    { id: "1_3_1", name: "3.1 完成2個探險", count: 1 },
+                    { id: "1_4_1", name: "4.1 種1000朵花", count: 1 },
+                    { id: "1_4_2", name: "4.2 摧毀2棵蘑菇", count: 2 }
                 ]
             },
             {
                 stage: 2,
                 title: "第 2 階段",
                 substeps: [
-                    { id: "2_1_1", name: "1.1 走2000步" },
-                    { id: "2_2_1", name: "2.1 種1000朵花" },
-                    { id: "2_2_2", name: "2.2 摧毀2棵蘑菇" },
-                    { id: "2_3_1", name: "3.1 培育3隻皮克敏" },
-                    { id: "2_3_2", name: "3.2 摧毀3棵蘑菇" },
-                    { id: "2_4_1", name: "4.1 種500朵主花" },
-                    { id: "2_4_2", name: "4.2 摧毀4棵蘑菇" }
+                    { id: "2_1_1", name: "1.1 走2000步", count: 1 },
+                    { id: "2_2_1", name: "2.1 種1000朵花", count: 1 },
+                    { id: "2_2_2", name: "2.2 摧毀2棵蘑菇", count: 2 },
+                    { id: "2_3_1", name: "3.1 培育3隻皮克敏", count: 1 },
+                    { id: "2_3_2", name: "3.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "2_4_1", name: "4.1 種500朵主花", count: 1 },
+                    { id: "2_4_2", name: "4.2 摧毀4棵蘑菇", count: 4 }
                 ]
             },
             {
                 stage: 3,
                 title: "第 3 階段",
                 substeps: [
-                    { id: "3_1_1", name: "1.1 走2000步" },
-                    { id: "3_1_2", name: "1.2 完成2個探險" },
-                    { id: "3_2_1", name: "2.1 種1500朵白色副花" },
-                    { id: "3_2_2", name: "2.2 摧毀3棵蘑菇" },
-                    { id: "3_3_1", name: "3.1 種1500朵紅色副花" },
-                    { id: "3_3_2", name: "3.2 摧毀4棵蘑菇" },
-                    { id: "3_4_1", name: "4.1 種1500朵黃色副花" },
-                    { id: "3_4_2", name: "4.2 種2000朵紅色主花" },
-                    { id: "3_4_3", name: "4.3 摧毀5棵蘑菇" }
+                    { id: "3_1_1", name: "1.1 走2000步", count: 1 },
+                    { id: "3_1_2", name: "1.2 完成2個探險", count: 1 },
+                    { id: "3_2_1", name: "2.1 種1500朵白色副花", count: 1 },
+                    { id: "3_2_2", name: "2.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "3_3_1", name: "3.1 種1500朵紅色副花", count: 1 },
+                    { id: "3_3_2", name: "3.2 摧毀4棵蘑菇", count: 4 },
+                    { id: "3_4_1", name: "4.1 種1500朵黃色副花", count: 1 },
+                    { id: "3_4_2", name: "4.2 種2000朵紅色主花", count: 1 },
+                    { id: "3_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
                 ]
             },
             {
                 stage: 4,
                 title: "第 4 階段",
                 substeps: [
-                    { id: "4_1_1", name: "1.1 完成3個探險" },
-                    { id: "4_1_2", name: "1.2 摧毀3棵蘑菇" },
-                    { id: "4_2_1", name: "2.1 種2000朵白色主花" },
-                    { id: "4_2_2", name: "2.2 摧毀4棵蘑菇" },
-                    { id: "4_3_1", name: "3.1 種2000朵黃色主花" },
-                    { id: "4_3_2", name: "3.2 種1000朵藍色副花" },
-                    { id: "4_3_3", name: "3.3 摧毀4棵蘑菇" },
-                    { id: "4_4_1", name: "4.1 種2000朵藍色主花" },
-                    { id: "4_4_2", name: "4.2 種2500朵副花" },
-                    { id: "4_4_3", name: "4.3 摧毀5棵蘑菇" }
+                    { id: "4_1_1", name: "1.1 完成3個探險", count: 1 },
+                    { id: "4_1_2", name: "1.2 摧毀3棵蘑菇", count: 3 },
+                    { id: "4_2_1", name: "2.1 種2000朵白色主花", count: 1 },
+                    { id: "4_2_2", name: "2.2 摧毀4棵蘑菇", count: 4 },
+                    { id: "4_3_1", name: "3.1 種2000朵黃色主花", count: 1 },
+                    { id: "4_3_2", name: "3.2 種1000朵藍色副花", count: 1 },
+                    { id: "4_3_3", name: "3.3 摧毀4棵蘑菇", count: 4 },
+                    { id: "4_4_1", name: "4.1 種2000朵藍色主花", count: 1 },
+                    { id: "4_4_2", name: "4.2 種2500朵副花", count: 1 },
+                    { id: "4_4_3", name: "4.3 摧毀5棵蘑菇", count: 5 }
                 ]
             }
         ];
@@ -658,13 +687,27 @@
             renderStages();
         }
 
+        function isTaskFullyCompleted(accTasks, taskId, totalCount) {
+            const progress = accTasks[taskId] || 0;
+            return progress >= totalCount;
+        }
+
         function renderTabs() {
             const container = document.getElementById('accountTabs');
             container.innerHTML = '';
 
             appData.accounts.forEach(acc => {
                 const isActive = acc.id === appData.activeAccountId;
-                const completedCount = Object.values(acc.tasks || {}).filter(Boolean).length;
+                let completedCount = 0;
+
+                STAGE_DATA.forEach(stage => {
+                    stage.substeps.forEach(sub => {
+                        if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
+                            completedCount++;
+                        }
+                    });
+                });
+
                 const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
 
                 const tab = document.createElement('div');
@@ -686,7 +729,15 @@
             const currentAcc = getActiveAccount();
             document.getElementById('accountNameInput').value = currentAcc.name;
 
-            const completedCount = Object.values(currentAcc.tasks || {}).filter(Boolean).length;
+            let completedCount = 0;
+            STAGE_DATA.forEach(stage => {
+                stage.substeps.forEach(sub => {
+                    if (isTaskFullyCompleted(currentAcc.tasks || {}, sub.id, sub.count)) {
+                        completedCount++;
+                    }
+                });
+            });
+
             const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
 
             document.getElementById('activeAccountPercent').textContent = `${percent}% (${completedCount}/${TOTAL_TASKS_COUNT})`;
@@ -703,8 +754,11 @@
             STAGE_DATA.forEach(stageInfo => {
                 const totalInStage = stageInfo.substeps.length;
                 let doneInStage = 0;
+
                 stageInfo.substeps.forEach(s => {
-                    if (currentAcc.tasks[s.id]) doneInStage++;
+                    if (isTaskFullyCompleted(currentAcc.tasks || {}, s.id, s.count)) {
+                        doneInStage++;
+                    }
                 });
                 const isStageComplete = doneInStage === totalInStage;
 
@@ -713,11 +767,23 @@
 
                 let tasksHtml = '';
                 stageInfo.substeps.forEach(substep => {
-                    const isChecked = !!currentAcc.tasks[substep.id];
+                    const currentProgress = currentAcc.tasks[substep.id] || 0;
+                    const isFullyDone = currentProgress >= substep.count;
+
+                    let boxesHtml = '';
+                    for (let i = 1; i <= substep.count; i++) {
+                        const isChecked = currentProgress >= i;
+                        boxesHtml += `
+                            <div class="custom-checkbox ${isChecked ? 'checked' : ''}" 
+                                 onclick="toggleTaskSubCount('${substep.id}', ${i}, ${substep.count})">
+                            </div>
+                        `;
+                    }
+
                     tasksHtml += `
-                        <div class="task-item ${isChecked ? 'completed' : ''}" onclick="toggleTask('${substep.id}')">
+                        <div class="task-item ${isFullyDone ? 'completed' : ''}">
                             <span class="task-label">${substep.name}</span>
-                            <input type="checkbox" class="task-checkbox" ${isChecked ? 'checked' : ''} onclick="event.stopPropagation(); toggleTask('${substep.id}')">
+                            <div class="checkbox-group">${boxesHtml}</div>
                         </div>
                     `;
                 });
@@ -752,10 +818,17 @@
             renderApp();
         }
 
-        function toggleTask(taskId) {
+        function toggleTaskSubCount(taskId, boxIndex, maxCount) {
             const acc = getActiveAccount();
             if (!acc.tasks) acc.tasks = {};
-            acc.tasks[taskId] = !acc.tasks[taskId];
+
+            const current = acc.tasks[taskId] || 0;
+            if (current >= boxIndex) {
+                acc.tasks[taskId] = boxIndex - 1;
+            } else {
+                acc.tasks[taskId] = boxIndex;
+            }
+
             saveToLocalStorage();
             renderApp();
         }
@@ -767,7 +840,7 @@
             const stageInfo = STAGE_DATA.find(s => s.stage === stageNum);
             if (stageInfo) {
                 stageInfo.substeps.forEach(sub => {
-                    acc.tasks[sub.id] = setComplete;
+                    acc.tasks[sub.id] = setComplete ? sub.count : 0;
                 });
             }
             saveToLocalStorage();
@@ -808,7 +881,15 @@
             container.innerHTML = '';
 
             appData.accounts.forEach(acc => {
-                const completedCount = Object.values(acc.tasks || {}).filter(Boolean).length;
+                let completedCount = 0;
+                STAGE_DATA.forEach(stage => {
+                    stage.substeps.forEach(sub => {
+                        if (isTaskFullyCompleted(acc.tasks || {}, sub.id, sub.count)) {
+                            completedCount++;
+                        }
+                    });
+                });
+
                 const percent = Math.round((completedCount / TOTAL_TASKS_COUNT) * 100);
 
                 const card = document.createElement('div');
@@ -818,7 +899,7 @@
                         <span>${escapeHtml(acc.name)}</span>
                         <span style="color:var(--primary);">${percent}%</span>
                     </div>
-                    <div class="progress-bar-bg" style="height:6px; margin-bottom:6px;">
+                    <div class="progress-bar-bg" style="height:6px; margin-bottom:6px; width:100%;">
                         <div class="progress-bar-fill" style="width:${percent}%"></div>
                     </div>
                 `;
